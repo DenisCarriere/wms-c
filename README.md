@@ -8,7 +8,10 @@
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-> WMS-C scheme for Javascript applications.
+WMS-C scheme for Javascript applications.
+
+> http://wiki.osgeo.org/wiki/WMS_Tiling_Client_Recommendation
+> /proxy/service?layers=osm&width=1184&version=1.1.1&bbox=4924990.60647,2968202.68237,5015492.04796,3058704.12386&service=WMS&format=image%2Fpng&styles=&srs=EPSG%3A3857&request=GetMap&height=1184
 
 ## Install
 
