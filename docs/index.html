@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<title>WMS-C</title>
+
+<h1>WMS-C</h1>
+<h2>Open Console <small>(Ctrl+Shift+i)</small></h2>
+
+<script src="wmsc.js"></script>
+<script>
+  const options = {
+    url: 'http://localhost:5000/WMSC',
+    title: 'Tile Service XYZ',
+    format: 'png',
+  }
+  const xml = wmsc.getCapabilities(options)
+  console.log(options)
+  console.log("const xml = wmsc.getCapabilities(options)")
+  console.log(xml)
+</script>
