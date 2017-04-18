@@ -1,0 +1,34 @@
+<Request>
+  <GetCapabilities>
+    <Format>application/vnd.ogc.wms_xml</Format>
+    <DCPType>
+      <HTTP>
+        <Get>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://localhost:80/WMTS"/>
+        </Get>
+      </HTTP>
+    </DCPType>
+  </GetCapabilities>
+  <GetMap>
+    <Format>image/jpeg</Format>
+    <DCPType>
+      <HTTP>
+        <Get>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://localhost:80/WMTS"/>
+        </Get>
+      </HTTP>
+    </DCPType>
+  </GetMap>
+  <GetFeatureInfo>
+    <Format>application/vnd.ogc.gml</Format>
+    <Format>text/plain</Format>
+    <Format>text/html</Format>
+    <DCPType>
+      <HTTP>
+        <Get>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://localhost:80/WMTS"/>
+        </Get>
+      </HTTP>
+    </DCPType>
+  </GetFeatureInfo>
+</Request>

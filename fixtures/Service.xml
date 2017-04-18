@@ -1,0 +1,13 @@
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>Tile Service</Title>
+  <Abstract>© OSM data</Abstract>
+  <KeywordList>
+    <Keyword>world</Keyword>
+    <Keyword>imagery</Keyword>
+    <Keyword>wms-c</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://localhost:80/WMTS"/>
+  <Fees>none</Fees>
+  <AccessConstraints>none</AccessConstraints>
+</Service>
