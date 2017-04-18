@@ -27,6 +27,7 @@ $ yarn add wmsc
 ## Quickstart
 
 ```javascript
+const wmsc = require('wmsc')
 const xml = wmsc.getCapabilities({
   url: 'http://localhost:5000/WMSC',
   title: 'Tile Service XYZ',
@@ -72,12 +73,12 @@ Get Capabilities
 **Examples**
 
 ```javascript
-const xml = wmts.getCapabilities({
+const xml = wmsc.getCapabilities({
   url: 'http://localhost:5000/WMTS',
   title: 'Tile Service XYZ',
   identifier: 'service-123',
   abstract: '© OSM data',
-  keyword: ['world', 'imagery', 'wmts'],
+  keyword: ['world', 'imagery', 'wmsc'],
   format: 'png',
   minzoom: 10,
   maxzoom: 18,
