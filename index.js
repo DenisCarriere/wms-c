@@ -40,17 +40,35 @@ const BBOX_METERS = [-20037508.3428, -20037508.3428, 20037508.3428, 20037508.342
  */
 function getCapabilities (options) {
   options = options || {}
-
-  // Define Options
   const spaces = options.spaces || SPACES
-
-  // XML header
-  const _declaration = {_attributes: { version: '1.0', encoding: 'utf-8' }}
-
-  // Define JSON
   const json = {
-    _declaration: _declaration,
+    _declaration: {_attributes: { version: '1.0', encoding: 'utf-8' }},
     WMT_MS_Capabilities: Capabilities(options).WMT_MS_Capabilities
+  }
+  const xml = convert.js2xml(json, { compact: true, spaces: spaces })
+  return xml
+}
+
+/**
+ * Service Exeception
+ *
+ * @param {string} message
+ * @param {Object} options
+ * @param {number} options.spaces
+ * @return {string} xml
+ */
+function exception (message, options) {
+  message = message || 'foo'
+  options = options || {}
+  const spaces = options.spaces || SPACES
+  const json = {
+    _declaration: {_attributes: { version: '1.0', encoding: 'utf-8' }},
+    ServiceExceptionReport: {
+      _attributes: {version: '1.1.1'},
+      ServiceException: {
+        _text: message
+      }
+    }
   }
   const xml = convert.js2xml(json, { compact: true, spaces: spaces })
   return xml
@@ -442,6 +460,7 @@ function range (start, stop, step) {
 
 module.exports = {
   getCapabilities: getCapabilities,
+  exception: exception,
   Capabilities: Capabilities,
   Capability: Capability,
   Service: Service,

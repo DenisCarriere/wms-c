@@ -45,6 +45,7 @@ function compare (t, data, fixture) {
 
 test('wmsc.getCapabilities', t => {
   compare(t, wmsc.getCapabilities(options), 'getCapabilities.xml')
+  compare(t, wmsc.exception('foo', options), 'exception.xml')
   compare(t, wmsc.Capabilities(options), 'Capabilities.xml')
   compare(t, wmsc.Capability(options), 'Capability.xml')
   compare(t, wmsc.Request(options), 'Request.xml')
