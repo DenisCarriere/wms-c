@@ -65,6 +65,7 @@ function exception (message, options) {
     _declaration: {_attributes: { version: '1.0', encoding: 'utf-8' }},
     ServiceExceptionReport: {
       _attributes: {version: '1.1.1'},
+      _doctype: ' ServiceExceptionReport SYSTEM "http://schemas.opengis.net/wms/1.1.1/exception_1_1_1.dtd"',
       ServiceException: {
         _text: message
       }
